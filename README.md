@@ -5,11 +5,12 @@
 ## Table of Contents
 - [About this repo](#about-this-repo)
   - [What was the .NET Conf Student Zone?](#what-was-the-net-conf-student-zone)
-  - [Digital Swag for the .NET Conf Student Zone 🎁🎉](#digital-swag-for-the-net-conf-student-zone-)
 - [Setup Information](#setup-information)
   - [Using this repo and development container](#using-this-repo-and-development-container)
     - [GitHub Codespaces](#github-codespaces)
     - [VS Code Remote - Containers](#vs-code-remote---containers)
+- [Instructions](#instructions)
+- [Azure Static Web App deployment](#azure-static-web-app-deployment)
 - [Student Resources](#student-resources)
 - [Learning Resources](#learning-resources)
 - [Trademarks](#trademarks)
@@ -26,13 +27,6 @@ More details on this project can be found below.
 
 ## What was the .NET Conf Student Zone?
 As part of [.NET Conf this year](https://www.dotnetconf.net/), we are hosting a .NET Student Zone on Monday, November 7! This is a livestreamed event where experts will introduce you to .NET and and build awesome, follow-along projects. You will walk away with a project portfolio on your very own portfolio website. In total the event will be 4+ hours of content.
-
-## Digital Swag for the .NET Conf Student Zone 🎁🎉
-[Download .NET Bot digital pet for VSCode](https://aka.ms/vscodepet)
-
-![DotNetPet](/images/dotnetbotpet.jpg)
-
-Puts a small, .NET Bot, bored cat, an enthusiastic dog, a feisty snake, a rubber duck, or Clippy 📎 in your VS Code editor to boost productivity.
 
 # Setup Information
 
@@ -71,7 +65,29 @@ Follow these steps to open this sample in a container using the VS Code Remote -
    
    - Open the `.devcontainer/devcontainer.json` file.
    - Modify the `"onAutoForward"` attribute in your `portsAttributes` from `"notify"` to `"openBrowser"`.
-   - Press <kbd>F1</kbd> and select the **Remote-Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.  
+   - Press <kbd>F1</kbd> and select the **Remote-Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
+
+# Instructions
+Once you have opened GitHub Codespaces you must replace your data inside the sample-data folder in resume.json
+
+Navigate to the src folder
+```
+cd src
+```
+
+Then compile the app with
+
+```
+dotnet build
+```
+
+Preview your app in the browser and when you are ready push those changes into your **main** branch or a new branch (if it is published in a new one, it will have a previous deployment when you create a pull request)
+
+Later, use the Azure Static Web App extension and follow the next steps.
+
+# Azure Static Web App deployment 
+During the workshop the CI/CD workflow did not work as I set "/" in one of the steps.
+The reason is that I thought it was in root but it was not. So in that step you should put **src** since the project is inside that folder.
 
 # Student Resources 
 1. [Microsoft Student Resources](https://learn.microsoft.com/en-gb/training/student-hub/?wt.mc_id=studentamb_118941)   
@@ -90,6 +106,12 @@ Want more .NET Learning resources?
 8. [Minimal APIs](http://aka.ms/dotnetminimalapi) 
 9. [ML.NET](http://aka.ms/trainmldotnet) 
 10. [.NET IoT](http://aka.ms/dotnetIOT) 
+11. Learn how to [Publish an Angular, React, Svelte, or Vue JavaScript app and API with Azure Static Web Apps](https://docs.microsoft.com/learn/modules/publish-app-service-static-web-app-api-dotnet?wt.mc_id=studentamb_118941)
+12. [API support in Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/apis?wt.mc_id=studentamb_118941)
+13. [Add an API to Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/add-api?wt.mc_id=studentamb_118941)
+14. [Authentication and authorization](https://docs.microsoft.com/azure/static-web-apps/authentication-authorization?wt.mc_id=studentamb_118941)
+15. [Routes](https://docs.microsoft.com/azure/static-web-apps/routes?wt.mc_id=studentamb_118941)
+16. [Review pre-production environments](https://docs.microsoft.com/azure/static-web-apps/review-publish-pull-requests?wt.mc_id=studentamb_118941)
 
 
 Watch [.NET Conf](https://www.dotnetconf.net/)! Sessions start November 8th.
