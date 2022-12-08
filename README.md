@@ -25,6 +25,8 @@ More details on this project can be found below.
 |-------|---------|-----------|---|---|---|
 | Build your Project Portfolio website with .NET | Matt Soucoup | Blazor | [Project Portfolio with Blazor Session](https://github.com/microsoft/dotnetconf-studentzone/tree/main/Build%20your%20Project%20Portfolio%20website%20with%20.NET/README.md) | [Watch On-Demand](https://youtu.be/SCJu7YPNtdQ?t=2596) |[Presentation](https://github.com/microsoft/dotnetconf-studentzone/blob/main/decks/Build-a-portfolio-using-blazor.pdf) |
 
+Additionally you can take a look at my own [portfolio blazor template](https://github.com/OscarSantos98/portfolio-blazor-template) where I re-structured and used MVVM to separate the UI from the Models. In any case, the only requirement to be up and running is to replace your data in the resume.json file.
+
 ## What was the .NET Conf Student Zone?
 As part of [.NET Conf this year](https://www.dotnetconf.net/), we are hosting a .NET Student Zone on Monday, November 7! This is a livestreamed event where experts will introduce you to .NET and and build awesome, follow-along projects. You will walk away with a project portfolio on your very own portfolio website. In total the event will be 4+ hours of content.
 
